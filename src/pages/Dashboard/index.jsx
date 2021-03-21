@@ -5,7 +5,7 @@ import { FoodsContainer } from './styles';
 import Header from '../../components/Header';
 import ModalAddFood from '../../components/ModalAddFood';
 import ModalEditFood from '../../components/ModalEditFood';
-import api from '../../services/api';
+import { api } from '../../services/api';
 
 export function Dashboard() {
   const [foods, setFoods] = useState([]);
@@ -35,7 +35,7 @@ export function Dashboard() {
     }
   }
 
-  async function handleUpdateFood (food) {
+  async function handleUpdateFood(food) {
     try {
       const foodUpdated = await api.put(
         `/foods/${editingFood.id}`,
@@ -68,7 +68,7 @@ export function Dashboard() {
     setEditModalOpen(!editModalOpen);
   }
 
-  function handleEditFood (food){
+  function handleEditFood(food) {
     setEditingFood(food);
     setEditModalOpen(true);
   }
