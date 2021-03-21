@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import Food from '../../components/Food';
+import { Food } from '../../components/Food';
 import { FoodsContainer } from './styles';
 import { Header } from '../../components/Header';
 import { ModalAddFood } from '../../components/ModalAddFood';
@@ -13,6 +13,7 @@ export interface FoodProps {
   name: string;
   description: string;
   price: number;
+  available: boolean;
 }
 
 export function Dashboard() {
