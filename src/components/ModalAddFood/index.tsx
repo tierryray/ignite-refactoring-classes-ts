@@ -3,7 +3,7 @@ import { FoodProps } from '../../pages/Dashboard';
 import { Form } from './styles';
 import { FormHandles } from '@unform/core';
 import Input from '../Input';
-import Modal from '../Modal';
+import { Modal } from '../Modal';
 import { useRef } from 'react';
 
 interface ModalAddFoodProps {
